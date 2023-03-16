@@ -45,7 +45,7 @@ function feedback_plugin_options_page()
 {
     // Code for options page here
     // Load CSS file
-    wp_enqueue_style( 'feedback-plugin-styles', plugin_dir_url( __FILE__ ) . '../css/feedback-plugin.css' );
+    wp_enqueue_style( 'feedback-plugin-styles', plugin_dir_url( __FILE__ ) . 'style.css' );
 
     // Check if form has been submitted
     if (isset($_POST['feedback_submit'])) {
@@ -67,23 +67,23 @@ function feedback_plugin_options_page()
         );
 
         // Display success message
-        echo '<div class="feedback-success">Thank you for your feedback!</div>';
+        echo '<div class="feedback-success">Merci pour votre feedback!</div>';
     }
 
     // Output form HTML
     echo '
     <div class="feedback-form">
       <form method="post">
-        <label for="feedback_note">Note (0-5): *</label>
-        <input type="number" name="feedback_note" id="feedback_note" min="0" max="5" required>
+        <label for="feedback_note">La note (0-5): <span class="red">*</span></label>
+        <input type="number" name="feedback_note" placeholder="Donner une note [0-5]" id="feedback_note" min="0" max="5" required>
         
-        <label for="feedback_remark">Remark: *</label>
-        <textarea name="feedback_remark" id="feedback_remark" required></textarea>
+        <label for="feedback_remark">Votre Remarque: <span class="red">*</span></label>
+        <textarea name="feedback_remark" placeholder="Ecrire votre remarque" id="feedback_remark" required></textarea>
         
-        <label for="feedback_post_id">Post/Page ID: *</label>
-        <input type="number" name="feedback_post_id" id="feedback_post_id" required>
+        <label for="feedback_post_id">Id du Post/Page : <span class="red">*</span></label>
+        <input type="number" name="feedback_post_id" placeholder="L\'id du page ou du poste" id="feedback_post_id" required>
         
-        <input type="submit" name="feedback_submit" value="Submit Feedback">
+        <input type="submit" name="feedback_submit" value="Envoyer Feedback">
       </form>
     </div>
   ';

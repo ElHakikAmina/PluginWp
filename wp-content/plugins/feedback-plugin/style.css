@@ -1,10 +1,10 @@
-/* Style pour le formulaire de feedback */
+Style pour le formulaire de feedback
 .feedback-form {
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
+    background-color: black;
+    border: 1px solid red;
     border-radius: 5px;
   }
   
@@ -22,11 +22,14 @@
     border-radius: 5px;
     border: 1px solid #ddd;
   }
-  
+  .red{
+    color:red;
+  }
   .feedback-form input[type="submit"] {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: black;
+    width:100%;
     color: #fff;
     border-radius: 5px;
     border: none;
@@ -34,7 +37,7 @@
   }
   
   .feedback-form input[type="submit"]:hover {
-    background-color: #3e8e41;
+    background-color: red;
   }
   
   .feedback-success {
